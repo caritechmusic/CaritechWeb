@@ -1,0 +1,6 @@
+{
+  "name": "Caritech Music",
+  "description": "Colectivo de música electrónica, producción de eventos inmersivos, bookings, gestión de talento y escuela de DJ y producción en Caracas desde 2019.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
