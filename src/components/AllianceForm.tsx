@@ -277,7 +277,7 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
             setMessage(e.target.value);
             if (errors.message) setErrors((prev) => ({ ...prev, message: undefined }));
           }}
-          placeholder="Cuéntanos sobre el espacio disponible, fechas tentativas, perfil de evento, booking requerido o interés en la escuela."
+          placeholder="Cuéntanos sobre el espacio disponible, fechas tentativas, perfil de evento o booking requerido."
           aria-invalid={Boolean(errors.message)}
           className="w-full rounded-md border border-white/15 bg-[#09090B] px-3.5 py-2.5 text-sm text-[#F4F4F5] placeholder:text-[#71717A] focus:border-[#EF4444] focus:outline-none resize-y"
         />

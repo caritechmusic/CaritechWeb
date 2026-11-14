@@ -1,7 +1,4 @@
-import studioProductionSession from '../assets/images/studio_production_session_1794599674401.jpg';
-import academyDjTurntables from '../assets/images/academy_dj_turntables_1794599674727.jpg';
-
-export type ServiceCategory = 'todos' | 'eventos-bookings' | 'produccion-visuales' | 'academia';
+export type ServiceCategory = 'todos' | 'eventos-bookings' | 'produccion-visuales';
 
 export type InquiryType =
   | 'Alianza / Nuevo Espacio'
@@ -119,20 +116,6 @@ export const HERO_SLIDES: HeroSlide[] = [
     caption: 'Horizonte de Caracas · Sesiones de día y atardecer',
     objectPosition: 'object-center',
   },
-  {
-    id: 'slide-studio-session',
-    image: studioProductionSession,
-    alt: 'Sesión de producción electrónica y diseño sonoro en Caritech Studio',
-    caption: 'Caritech Studio · Producción Musical y Catálogo',
-    objectPosition: 'object-center',
-  },
-  {
-    id: 'slide-academy-booth',
-    image: academyDjTurntables,
-    alt: 'Cabina de entrenamiento y mezcla en la Escuela DJ de Caritech Music',
-    caption: 'Academia Caritech · Escuela de DJ y Producción',
-    objectPosition: 'object-center',
-  },
 ];
 
 export const KEY_METRICS = [
@@ -147,9 +130,9 @@ export const KEY_METRICS = [
     detail: 'Eventos, bookings, estudio y visuales',
   },
   {
-    value: '5',
-    label: 'Divisiones activas',
-    detail: 'DJs, productores, foto y academia',
+    value: '4',
+    label: 'Líneas de servicio',
+    detail: 'Eventos, bookings, estudio y foto',
   },
   {
     value: 'LATAM +',
@@ -181,7 +164,7 @@ export const TIMELINE_MILESTONES: TimelineMilestone[] = [
     period: '2025 — 2026+',
     title: 'Ecosistema 360° y expansión internacional',
     description:
-      'Con DJs, productores musicales, fotógrafos y escuela de DJ y producción, Caritech Music impulsa alianzas para llevar propuestas vanguardistas a nuevos mercados.',
+      'Con DJs, productores musicales y fotógrafos, Caritech Music impulsa alianzas para llevar propuestas vanguardistas a nuevos mercados.',
   },
 ];
 
@@ -502,8 +485,8 @@ export const STUDIO_SPOTLIGHTS: StudioSpotlight[] = [
     title: 'Producción musical y catálogo propio',
     description:
       'Nuestro equipo de productores trabaja en estudio en composiciones originales, mezcla, mastering y diseño sonoro para artistas, lanzamientos discográficos y activaciones de marca.',
-    image: studioProductionSession,
-    imageAlt: 'Productor musical trabajando con sintetizadores analógicos y monitores de estudio',
+    image: '/assets/aistudio/image_5eba940a.png',
+    imageAlt: 'Estudio de producción musical de Caritech Music con FL Studio, monitores, teclado MIDI y micrófono',
     inquiryPreset: 'Booking de Talento',
   },
   {
@@ -512,8 +495,8 @@ export const STUDIO_SPOTLIGHTS: StudioSpotlight[] = [
     title: 'Escuela de DJ y Producción Musical',
     description:
       'Entrenamiento presencial práctico en equipamiento profesional de club y estaciones de producción digital, guiado por DJs y productores activos en la escena.',
-    image: academyDjTurntables,
-    imageAlt: 'Instructor realizando mezcla en consola DJ profesional dentro del estudio de formación',
+    image: '/assets/aistudio/image_540df62e.png',
+    imageAlt: 'Controladora Pioneer DJ con Rekordbox y monitores de estudio para entrenamiento presencial',
     inquiryPreset: 'Escuela DJ & Producción',
   },
 ];
@@ -578,21 +561,6 @@ export const SERVICE_OFFERINGS: ServiceOffering[] = [
     ],
     targetAudience: 'DJs, festivales, clubes y marcas asociadas a experiencias',
     inquiryPreset: 'Alianza / Nuevo Espacio',
-  },
-  {
-    number: '05.',
-    id: 'academia-caritech',
-    category: 'academia',
-    categoryLabel: 'Formación & Talento',
-    title: 'Escuela de DJ y Producción Musical',
-    lead: 'Programas presenciales y mentorías personalizadas para dominar el arte de la cabina y la creación musical con estándares profesionales actuales.',
-    deliverables: [
-      'Módulos de DJing: beatmatching, armonía, phrasing y lectura de pista',
-      'Módulos de producción: diseño sonoro, ritmo, arreglo y mezcla',
-      'Sesiones prácticas con equipamiento profesional de club y estudio',
-    ],
-    targetAudience: 'Aspirantes a DJ, productores en formación y artistas buscando perfeccionamiento',
-    inquiryPreset: 'Escuela DJ & Producción',
   },
 ];
 

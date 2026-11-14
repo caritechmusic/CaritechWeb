@@ -21,7 +21,6 @@ const SERVICE_FILTERS: { id: ServiceCategory; label: string }[] = [
   { id: 'todos', label: 'Todos los servicios' },
   { id: 'eventos-bookings', label: 'Eventos y Bookings' },
   { id: 'produccion-visuales', label: 'Estudio y Fotografía' },
-  { id: 'academia', label: 'Academia DJ' },
 ];
 
 const HOME_DIRECTORY: {
@@ -54,13 +53,13 @@ const HOME_DIRECTORY: {
     number: '04',
     tab: 'servicios',
     title: 'Servicios y Productos',
-    hint: 'Eventos, bookings, estudio, foto y academia',
+    hint: 'Eventos, bookings, estudio y fotografía',
   },
   {
     number: '05',
     tab: 'colectivo',
-    title: 'Colectivo y Academia',
-    hint: 'Disciplinas y formación presencial',
+    title: 'Colectivo',
+    hint: 'DJs, productores y dirección visual',
   },
   {
     number: '06',
@@ -413,7 +412,7 @@ export default function App() {
           </section>
         )}
 
-        {/* PESTAÑA: COLECTIVO & ACADEMIA */}
+        {/* PESTAÑA: COLECTIVO */}
         {activeTab === 'colectivo' && (
           <section id="colectivo" className="bg-[#0F0F12] py-12 lg:py-20">
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10 space-y-16">
@@ -453,12 +452,12 @@ export default function App() {
                       key={spotlight.id}
                       className="grid overflow-hidden rounded-xl border border-white/10 bg-[#141418] sm:grid-cols-12"
                     >
-                      <div className="sm:col-span-5 aspect-[4/3] sm:aspect-auto">
+                      <div className="sm:col-span-5 flex items-center justify-center bg-white p-2 aspect-[4/3] sm:aspect-auto">
                         <MediaImage
                           src={spotlight.image}
                           alt={spotlight.imageAlt}
                           title={spotlight.title}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-contain"
                         />
                       </div>
                       <div className="sm:col-span-7 flex flex-col justify-between gap-5 p-6">
@@ -547,9 +546,8 @@ export default function App() {
                     Construyamos la próxima experiencia juntos.
                   </h1>
                   <p className="text-sm leading-relaxed text-[#A1A1AA]">
-                    Ya sea para activar una locación singular, contratar talento del roster, producir
-                    un evento corporativo o inscribirte en nuestra escuela de DJ y producción,
-                    prepara tu solicitud y conversemos directamente.
+                    Ya sea para activar una locación singular, contratar talento del roster o producir
+                    un evento corporativo, prepara tu solicitud y conversemos directamente.
                   </p>
                 </div>
 
@@ -593,7 +591,7 @@ export default function App() {
             <div className="space-y-1">
               <p className="font-display text-base font-semibold text-[#F4F4F5]">Caritech Music</p>
               <p className="text-xs text-[#8A8A93]">
-                Eventos inmersivos · Bookings · Producción Musical · Fotografía · Escuela DJ
+                Eventos inmersivos · Bookings · Producción Musical · Fotografía
               </p>
             </div>
           </div>
