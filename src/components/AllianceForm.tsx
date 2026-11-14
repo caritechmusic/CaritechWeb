@@ -101,29 +101,29 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
 
   if (submittedBrief) {
     return (
-      <div className="rounded-xl border border-white/15 bg-[#111115] p-6 sm:p-8 space-y-6">
+      <div className="rounded-xl border border-white/15 bg-[#141418] p-6 sm:p-8 space-y-6">
         <div className="flex items-start gap-3">
-          <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#E5A93C] text-[#08080A]">
+          <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#DC2626] text-white">
             <Check className="h-4 w-4" aria-hidden="true" />
           </div>
           <div>
-            <h3 className="font-display text-xl font-semibold text-[#EDECE8]">
+            <h3 className="font-display text-xl font-semibold text-[#F4F4F5]">
               Resumen de propuesta preparado
             </h3>
-            <p className="mt-1 text-sm text-[#A3A39E]">
+            <p className="mt-1 text-sm text-[#A1A1AA]">
               Tu ficha estructurada está lista para enviar directamente al equipo de Caritech Music.
             </p>
           </div>
         </div>
 
-        <pre className="whitespace-pre-wrap rounded-lg border border-white/10 bg-[#08080A] p-4 font-mono text-xs leading-relaxed text-[#D6D5D0]">
+        <pre className="whitespace-pre-wrap rounded-lg border border-white/10 bg-[#09090B] p-4 font-mono text-xs leading-relaxed text-[#D4D4D8]">
           {submittedBrief}
         </pre>
 
         <div className="flex flex-wrap items-center gap-3">
           <a
             href={mailtoHref}
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-[#E5A93C] px-5 py-2.5 text-sm font-semibold text-[#08080A] hover:bg-[#EEB955] transition-colors duration-150 whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-[#DC2626] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#EF4444] transition-colors duration-150 whitespace-nowrap"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
             <span>Enviar por correo</span>
@@ -132,11 +132,11 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
           <button
             type="button"
             onClick={handleCopyBrief}
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-transparent px-4 py-2.5 text-sm font-medium text-[#EDECE8] hover:bg-white/5 transition-colors duration-150 whitespace-nowrap cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-transparent px-4 py-2.5 text-sm font-medium text-[#F4F4F5] hover:bg-white/5 transition-colors duration-150 whitespace-nowrap cursor-pointer"
           >
             {copied ? (
               <>
-                <Check className="h-4 w-4 text-[#E5A93C]" aria-hidden="true" />
+                <Check className="h-4 w-4 text-[#EF4444]" aria-hidden="true" />
                 <span>Copiado al portapapeles</span>
               </>
             ) : (
@@ -150,7 +150,7 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
           <button
             type="button"
             onClick={() => setSubmittedBrief(null)}
-            className="ml-auto text-sm font-medium text-[#A3A39E] hover:text-[#EDECE8] underline-offset-4 hover:underline cursor-pointer"
+            className="ml-auto text-sm font-medium text-[#A1A1AA] hover:text-[#F4F4F5] underline-offset-4 hover:underline cursor-pointer"
           >
             Editar solicitud
           </button>
@@ -163,10 +163,10 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-xl border border-white/15 bg-[#111115] p-6 sm:p-8 space-y-6"
+      className="rounded-xl border border-white/15 bg-[#141418] p-6 sm:p-8 space-y-6"
     >
       <div>
-        <span className="block text-xs font-medium text-[#A3A39E] mb-3">
+        <span className="block text-xs font-medium text-[#A1A1AA] mb-3">
           Área de interés
         </span>
         <div className="flex flex-wrap gap-2">
@@ -177,10 +177,10 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
                 key={option}
                 type="button"
                 onClick={() => setInquiryType(option)}
-                className={`rounded-md px-3.5 py-2 text-xs font-medium transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C] ${
+                className={`rounded-md px-3.5 py-2 text-xs font-medium transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4444] ${
                   active
-                    ? 'bg-[#E5A93C] text-[#08080A] font-semibold'
-                    : 'border border-white/10 bg-[#0A0A0D] text-[#B8B7B2] hover:border-white/25 hover:text-[#EDECE8]'
+                    ? 'bg-[#DC2626] text-white font-semibold'
+                    : 'border border-white/10 bg-[#0B0B0E] text-[#D4D4D8] hover:border-white/25 hover:text-[#F4F4F5]'
                 }`}
               >
                 {option}
@@ -192,7 +192,7 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="contact-name" className="block text-xs font-medium text-[#D6D5D0] mb-1.5">
+          <label htmlFor="contact-name" className="block text-xs font-medium text-[#D4D4D8] mb-1.5">
             Nombre completo
           </label>
           <input
@@ -205,13 +205,13 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
             }}
             placeholder="Ej. Andrés Mendoza"
             aria-invalid={Boolean(errors.name)}
-            className="w-full rounded-md border border-white/15 bg-[#08080A] px-3.5 py-2.5 text-sm text-[#EDECE8] placeholder:text-[#666662] focus:border-[#E5A93C] focus:outline-none"
+            className="w-full rounded-md border border-white/15 bg-[#09090B] px-3.5 py-2.5 text-sm text-[#F4F4F5] placeholder:text-[#71717A] focus:border-[#EF4444] focus:outline-none"
           />
-          {errors.name && <p className="mt-1.5 text-xs text-amber-400">{errors.name}</p>}
+          {errors.name && <p className="mt-1.5 text-xs text-red-400">{errors.name}</p>}
         </div>
 
         <div>
-          <label htmlFor="contact-org" className="block text-xs font-medium text-[#D6D5D0] mb-1.5">
+          <label htmlFor="contact-org" className="block text-xs font-medium text-[#D4D4D8] mb-1.5">
             Venue, club, marca o proyecto
           </label>
           <input
@@ -220,14 +220,14 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
             value={organization}
             onChange={(e) => setOrganization(e.target.value)}
             placeholder="Opcional"
-            className="w-full rounded-md border border-white/15 bg-[#08080A] px-3.5 py-2.5 text-sm text-[#EDECE8] placeholder:text-[#666662] focus:border-[#E5A93C] focus:outline-none"
+            className="w-full rounded-md border border-white/15 bg-[#09090B] px-3.5 py-2.5 text-sm text-[#F4F4F5] placeholder:text-[#71717A] focus:border-[#EF4444] focus:outline-none"
           />
         </div>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="contact-email" className="block text-xs font-medium text-[#D6D5D0] mb-1.5">
+          <label htmlFor="contact-email" className="block text-xs font-medium text-[#D4D4D8] mb-1.5">
             Correo electrónico
           </label>
           <input
@@ -240,13 +240,13 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
             }}
             placeholder="nombre@empresa.com"
             aria-invalid={Boolean(errors.email)}
-            className="w-full rounded-md border border-white/15 bg-[#08080A] px-3.5 py-2.5 text-sm text-[#EDECE8] placeholder:text-[#666662] focus:border-[#E5A93C] focus:outline-none"
+            className="w-full rounded-md border border-white/15 bg-[#09090B] px-3.5 py-2.5 text-sm text-[#F4F4F5] placeholder:text-[#71717A] focus:border-[#EF4444] focus:outline-none"
           />
-          {errors.email && <p className="mt-1.5 text-xs text-amber-400">{errors.email}</p>}
+          {errors.email && <p className="mt-1.5 text-xs text-red-400">{errors.email}</p>}
         </div>
 
         <div>
-          <label htmlFor="contact-location" className="block text-xs font-medium text-[#D6D5D0] mb-1.5">
+          <label htmlFor="contact-location" className="block text-xs font-medium text-[#D4D4D8] mb-1.5">
             Ciudad y país
           </label>
           <input
@@ -259,14 +259,14 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
             }}
             placeholder="Ej. Caracas, Venezuela / Madrid, España"
             aria-invalid={Boolean(errors.location)}
-            className="w-full rounded-md border border-white/15 bg-[#08080A] px-3.5 py-2.5 text-sm text-[#EDECE8] placeholder:text-[#666662] focus:border-[#E5A93C] focus:outline-none"
+            className="w-full rounded-md border border-white/15 bg-[#09090B] px-3.5 py-2.5 text-sm text-[#F4F4F5] placeholder:text-[#71717A] focus:border-[#EF4444] focus:outline-none"
           />
-          {errors.location && <p className="mt-1.5 text-xs text-amber-400">{errors.location}</p>}
+          {errors.location && <p className="mt-1.5 text-xs text-red-400">{errors.location}</p>}
         </div>
       </div>
 
       <div>
-        <label htmlFor="contact-message" className="block text-xs font-medium text-[#D6D5D0] mb-1.5">
+        <label htmlFor="contact-message" className="block text-xs font-medium text-[#D4D4D8] mb-1.5">
           Contexto de la propuesta o consulta
         </label>
         <textarea
@@ -279,18 +279,18 @@ export function AllianceForm({ selectedPreset, presetNote }: AllianceFormProps) 
           }}
           placeholder="Cuéntanos sobre el espacio disponible, fechas tentativas, perfil de evento, booking requerido o interés en la escuela."
           aria-invalid={Boolean(errors.message)}
-          className="w-full rounded-md border border-white/15 bg-[#08080A] px-3.5 py-2.5 text-sm text-[#EDECE8] placeholder:text-[#666662] focus:border-[#E5A93C] focus:outline-none resize-y"
+          className="w-full rounded-md border border-white/15 bg-[#09090B] px-3.5 py-2.5 text-sm text-[#F4F4F5] placeholder:text-[#71717A] focus:border-[#EF4444] focus:outline-none resize-y"
         />
-        {errors.message && <p className="mt-1.5 text-xs text-amber-400">{errors.message}</p>}
+        {errors.message && <p className="mt-1.5 text-xs text-red-400">{errors.message}</p>}
       </div>
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-1">
-        <p className="text-xs text-[#8D8D88]">
+        <p className="text-xs text-[#8A8A93]">
           Respuesta directa a través de caritechmusic@gmail.com
         </p>
         <button
           type="submit"
-          className="inline-flex items-center justify-center gap-2 rounded-md bg-[#E5A93C] px-6 py-3 text-sm font-semibold text-[#08080A] hover:bg-[#EEB955] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5A93C]"
+          className="inline-flex items-center justify-center gap-2 rounded-md bg-[#DC2626] px-6 py-3 text-sm font-semibold text-white hover:bg-[#EF4444] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4444]"
         >
           <span>Preparar propuesta</span>
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
